@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vaultsname": {
+            "value": "HiggConKV02"
+        },
+        "tenantId": {
+            "value": "b21a1566-203d-4107-9544-fa2a464073ab"
+        },
+        "AADGroupId": {
+            "value": "bb774a14-0c94-4319-a151-8946724f51e5"
+        }
+    }
+}
