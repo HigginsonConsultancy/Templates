@@ -10,9 +10,6 @@
         },
         "networkSecurityGroupname": {
             "value": "HiggConNSG"
-        },
-        "networkSecurityGroups_externalid": {
-            "value": "[concat('/subscriptions/12ffc0b7-8212-4d57-9591-3dc43c20c77c/resourceGroups/', parameters('resourceGroupname'), '/providers/Microsoft.Network/networkSecurityGroups/', parameters('networkSecurityGroupname'))]"
         }
     }
 }
