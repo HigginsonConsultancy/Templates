@@ -1,0 +1,30 @@
+,
+        {
+    "apiVersion": "2018-06-01",
+    "type": "Microsoft.Compute/virtualMachines/extensions",
+    "name": "[Concat(parameters('virtualMachineName'),'/config-app')]",
+    "location": "[resourceGroup().location]",
+    "dependsOn": [
+        "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
+    ],
+    "tags": {
+        "displayName": "config-app"
+    },
+    "properties": {
+        "publisher": "Microsoft.Compute",
+        "type": "CustomScriptExtension",
+        "typeHandlerVersion": "1.10",
+        "autoUpgradeMinorVersion": true,
+        "settings": {
+            "fileUris": [
+                "https://raw.githubusercontent.com/***********/****/master/VMConfig.ps1"
+                
+            ],
+            "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File VMConfig.ps1"
+            
+        },
+        "protectedSettings": {
+
+        }
+    }
+}
